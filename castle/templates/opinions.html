@@ -1,0 +1,10 @@
+{% extends "base.html" %} {% block title %}Index{% endblock %} {% block content%}
+                
+<a href="{{ url_for('views.index') }}" class="no-link">&#x2190; Back</a><br/>
+	
+	{% for post in posts %}
+		{{ post.datecreated }}&nbsp;&nbsp;&nbsp;<a href="/opinions/{{ post.title }}">{{ post.title|safe }}</a><br/>
+	{% endfor %}
+</div>
+<div id=datetimebox></div>
+{% endblock %}

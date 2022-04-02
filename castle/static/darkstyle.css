@@ -1,0 +1,205 @@
+html {
+	background-color: #1A1A15;
+	font-family: verdana;
+	color: #FFF;
+	font-size: 15px;
+}
+
+body { }
+
+a {
+	color: #14d1f7;
+}
+
+.no-link {
+	text-decoration: none;
+}
+
+h1 {
+	color: #EEE;
+	font-family: verdana;
+	font-size: 48px;
+	text-align: center;
+	margin-top: 14px;
+	margin-bottom: 14px;
+}
+
+h2 {
+	color: #AAA;
+	font-family: verdana;
+	font-size: 30px;
+	text-align: center;
+	margin-top: 14px;
+	margin-bottom: 22px;
+}
+
+h3 {
+	color: #ADF;
+	font-family: verdana;
+	font-size: 18px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+
+p {
+	margin-top: 4px;
+	margin-bottom: 4px;
+	font-style: italic;
+}
+
+#titles {
+	position: fixed;
+	width:  100%; height: 160px; min-width: 1024px;
+	margin-left: -8px;
+	margin-right: auto;
+	top:  0;
+	background-color: #1A1F1F;
+	border-bottom: 1px solid #456;
+  	box-shadow: 0px 5px 15px #050505;
+}
+
+#castleimg {
+	position:  fixed;
+	left: 0; top: 0;
+	margin-left: 4px; margin-top: 4px;
+	padding: 8px;
+	cursor: pointer;
+}
+
+#mainbody {
+	width: 1024px; min-width: 1024px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 160px;
+	padding-top: 14px;
+	height: auto;
+	overflow:  auto;
+	background-color: #1D1D19;
+	text-align: left;
+}
+
+#mainblogbody {
+	width: 1024px; min-width: 1024px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 160px;
+	padding-top: 14px;
+	height: auto;
+	overflow:  auto;
+	background-color: #1D1D19;
+	line-height: 2;
+}
+
+#datetimebox {
+	position: fixed;
+	top: 0; right: 0;
+	width: 100px; height: 20px;
+	text-align: right;
+	margin-right: 8px;
+	margin-top: 8px;
+	color: #888;
+}
+
+#gitdiv {
+	width: 100%; min-width: 350px;
+}
+
+.gitline {
+	color: #FFF;
+	width: 100%; height: auto;
+}
+
+.gitlineinner {
+	padding: 8px;
+}
+
+.gitlineinner:hover {
+	background-color: #2A2A2F;
+}
+
+.grid {
+	min-width: 100%; height: auto;
+	display: inline-grid;
+ 	grid-template-columns: auto auto auto;
+}
+
+.grid-item {
+	text-align: center; 
+	padding-top: 20px; padding-bottom: 20px;
+	font-size: 18px;
+}
+
+.grid-item:hover {
+	background-color: #1A1F1F;
+	cursor: pointer;
+	box-shadow: inset 0px 0px 1px 2px #456;
+}
+
+.git-grid {
+	min-width: 100%; height: auto;
+	display: inline-grid;
+ 	grid-template-columns: auto auto auto;
+}
+
+#weather {
+	position: fixed;
+	right: 0; padding-right: 8px;
+	top: 136px;
+	color: #888;
+}
+
+#blogdate {
+	padding: 4px;
+	padding-left: 18px;
+}
+
+#blogtitle {
+	font-size: 32px;
+	font-weight: bold;
+	color: #ADF;
+	padding: 4px;
+	padding-left: 18px;
+	border-bottom: 1px solid #666;
+}
+
+#blogbody {
+	color: #AAA;
+	padding: 18px;
+	text-align: justify;
+}
+
+.quote {
+	font-style: italic;
+	font-size: 24px;
+	color: #FFF;
+	text-align: center !important;
+	font-family: 'Times New Roman', serif;
+	padding-left: 20px; padding-right: 20px;
+}
+
+.subtitle {
+	display: inline-block;
+	font-weight: bold;
+	color: #FFF;
+	line-height: 2.5;
+	font-size: 15px;
+	padding-left: 8px;
+}
+
+.reference {
+	padding-left: 18px; padding-right: 18px;
+	color: #999;
+}
+
+.centreme {
+	width: 100%; text-align: center;
+}
+
+#loginbox {
+	height: auto; width: 100%;
+	text-align: center;
+	background-color: #1A1A1A;
+	margin-top: 8px;
+}

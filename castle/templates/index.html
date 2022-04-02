@@ -1,0 +1,14 @@
+{% extends "base.html" %} {% block title %}Index{% endblock %} {% block content%}
+<div class=centreme><img src="static/undercon.png" width=200/><br/>
+<img src="static/druid.jpg" width=200/></div>
+
+<h2>{{ user.username }}</h2>
+
+<div class="grid">
+	<a href="{{ url_for('views.gitlines') }}" class="no-link"><div class="grid-item"><img src="static/githubiconL.png" width=100 /><br/>Github Code</div>
+	<a href="{{ url_for('views.writings') }}" class="no-link"><div class="grid-item"><img src="static/writings.png" width=100 /><br/>Writing Projects</div>
+	<a href="{{ url_for('views.opinions') }}" class="no-link"><div class="grid-item"><img src="static/opinions.png" width=100 /><br/>Opinions</div>
+</div>
+
+<div id=datetimebox></div>
+{% endblock %}

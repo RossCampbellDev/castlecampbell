@@ -1,0 +1,37 @@
+{% extends "base.html" %} {% block title %}Index{% endblock %} {% block content%}
+       
+<a href="{{ url_for('views.index') }}" class="no-link">&#x2190; Back</a><br/>
+
+		<div id=gitdiv>
+			<div style="width:100%; text-align:center;"><img src="static/githubiconL.png" width=100 /><br/><h2>Github</h2></div>
+			<div class=git-grid>
+				<div class=gitline><div class=gitlineinner><h3>arpvenom</h3><a href='https://github.com/rcampbell-sec/arpvenom' target=_blank>github</a><p>ARP poisoning using Python</p></div></div>
+				<div class=gitline><div class=gitlineinner><h3>DFIR-home-lab</h3><a href='https://github.com/rcampbell-sec/DFIR-home-lab' target=_blank>github</a><p>steps i went through to set up a malware analysis/digital forensics lab at home</p></div></div>
+				<div class=gitline><div class=gitlineinner><h3>docker-cheatsheet</h3><a href='https://github.com/rcampbell-sec/docker-cheatsheet' target=_blank>github</a><p>some basic info for using Docker</p></div></div>
+				<div class=gitline><div class=gitlineinner><h3>FileHasher</h3><a href='https://github.com/rcampbell-sec/FileHasher' target=_blank>github</a><p>A Python script for hashing files, storing the hashes in a file, and comparing to older hashes for security checks</p></div></div>
+				<div class=gitline><div class=gitlineinner><h3>FindInFilesInDirectory</h3><a href='https://github.com/rcampbell-sec/FindInFilesInDirectory' target=_blank>github</a><p>A simple Python tool that uses generators to locate a search string in files within a given directory</p></div></div>
+				<div class=gitline><div class=gitlineinner><h3>FindInManyPcaps</h3><a href='https://github.com/rcampbell-sec/FindInManyPcaps' target=_blank>github</a><p>A script for quickly collecting all traffic matching simple criteria from all pcap files in a directory</p></div></div>
+				<div class=gitline><div class=gitlineinner><h3>flask-api-cheat-sheet</h3><a href='https://github.com/rcampbell-sec/flask-api-cheat-sheet' target=_blank>github</a><p>the bare bones to get started making a REST style API with Python Flask</p></div></div>
+				<div class=gitline><div class=gitlineinner><h3>flask-azure-test</h3><a href='https://github.com/rcampbell-sec/flask-azure-test' target=_blank>github</a><p>simple data visualisation app that i will deploy to azure</p></div></div>
+				<div class=gitline><div class=gitlineinner><h3>flask-rest-api-more-detail</h3><a href='https://github.com/rcampbell-sec/flask-rest-api-more-detail' target=_blank>github</a><p>a more detailed guide on building a RESTful API using Python Flask and SQLAlchemy</p></div></div>
+				<div class=gitline><div class=gitlineinner><h3>flask-testing-repo</h3><a href='https://github.com/rcampbell-sec/flask-testing-repo' target=_blank>github</a><p>a simple flask RESTful API app for testing</p></div></div>
+				<div class=gitline><div class=gitlineinner><h3>hackthebox-HDC</h3><a href='https://github.com/rcampbell-sec/hackthebox-HDC' target=_blank>github</a><p>a simple hackthebox CTF</p></div></div>
+				<div class=gitline><div class=gitlineinner><h3>hackthebox-lernaean</h3><a href='https://github.com/rcampbell-sec/hackthebox-lernaean' target=_blank>github</a><p>try to crack a password</p></div></div>
+				<div class=gitline><div class=gitlineinner><h3>hackthebox-MisDIRection</h3><a href='https://github.com/rcampbell-sec/hackthebox-MisDIRection' target=_blank>github</a><p>A strange little challenge where the structure of a directory is a puzzle to be solved</p></div></div>
+				<div class=gitline><div class=gitlineinner><h3>home-lab-test-restoro</h3><a href='https://github.com/rcampbell-sec/home-lab-test-restoro' target=_blank>github</a><p>testing my home lab setup by deliberately finding the dodgiest file i could on the internet</p></div></div>
+				<div class=gitline><div class=gitlineinner><h3>malware-persistence-registries</h3><a href='https://github.com/rcampbell-sec/malware-persistence-registries' target=_blank>github</a><p>a quick overview of some of the ways malware tries to achieve persistence by abusing registry keys</p></div></div>
+				<div class=gitline><div class=gitlineinner><h3>MalwareChecker</h3><a href='https://github.com/rcampbell-sec/MalwareChecker' target=_blank>github</a><p>-</p></div></div>
+				<div class=gitline><div class=gitlineinner><h3>Metasploit</h3><a href='https://github.com/rcampbell-sec/Metasploit' target=_blank>github</a><p>basic info for getting started with metasploit</p></div></div>
+				<div class=gitline><div class=gitlineinner><h3>NVDRSSAlerts</h3><a href='https://github.com/rcampbell-sec/NVDRSSAlerts' target=_blank>github</a><p>-</p></div></div>
+				<div class=gitline><div class=gitlineinner><h3>postexploit-createuser</h3><a href='https://github.com/rcampbell-sec/postexploit-createuser' target=_blank>github</a><p>learning to create dodgy users for our nefarious deeds, post exploitation</p></div></div>
+				<div class=gitline><div class=gitlineinner><h3>Protocols</h3><a href='https://github.com/rcampbell-sec/Protocols' target=_blank>github</a><p>A cheat sheet for protocols and ports</p></div></div>
+				<div class=gitline><div class=gitlineinner><h3>PyPcapParse</h3><a href='https://github.com/rcampbell-sec/PyPcapParse' target=_blank>github</a><p>-</p></div></div>
+			</div>
+		</div><!-- gitdiv -->
+	</div><!-- mainbody -->
+
+	<div id=datetimebox></div>
+</body>
+
+</html>
+{% endblock %}

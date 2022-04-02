@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>The home of the digital castle</title>
+	<link rel="stylesheet" media="screen" href="{{ url_for('static', filename='darkstyle.css')}}">
+	<link rel="icon" type="image/x-icon" href="static/favicon.ico"  />
+	<script src="{{ url_for('static', filename='scripting.js') }}"></script>
+	<meta charset="UTF-8">
+</head>
+
+<body onload='settime()'>
+	<div id=titles>
+		<h1>Welcome to The Digital Castle</h1>
+		<h2>The internet... as it should have been.</h2>
+	</div><!-- titles -->
+	<!--<div id=castleimg onclick='window.scrollTo(0,0)'><img src="static/astle.png" width=60/></div>-->
+	<div id=castleimg onclick="goHome()"><img src="static/castle.png" width=60/><h3>&#129497Ross Campbell</h3></div>
+	<div id="weather">{{ weather|safe }}</div>
+
+	<div id=mainbody>
+		<div class=centreme><img src="static/undercon.png" width=200/><br/>
+		<img src="static/druid.jpg" width=200/></div>
+
+		<div class="grid">
+			<a href="{{ url_for('views.gitlines') }}" class="no-link"><div class="grid-item"><img src="static/githubiconL.png" width=100 /><br/>Github Code</div>
+			<a href="{{ url_for('views.writings') }}" class="no-link"><div class="grid-item"><img src="static/writings.png" width=100 /><br/>Writing Projects</div>
+			<a href="{{ url_for('views.opinions') }}" class="no-link"><div class="grid-item"><img src="static/opinions.png" width=100 /><br/>Opinions</div>
+			<!--<a href="{{ url_for('views.index') }}" class="no-link"><div class="grid-item"><img src="static/placeholder.png" width=100 /><br/>Testing</div>
+			<a href="index.html" class="no-link"><div class="grid-item"></div>
+			<a href="index.html" class="no-link"><div class="grid-item"></div>
+			<a href="index.html" class="no-link"><div class="grid-item"></div>
+			<a href="index.html" class="no-link"><div class="grid-item"></div>
+			<a href="index.html" class="no-link"><div class="grid-item"></div>-->
+		</div>
+	<div id=datetimebox></div>
+	<a href="{{ url_for('auth.login') }}">Login</a>
+</body>
+
+</html>
