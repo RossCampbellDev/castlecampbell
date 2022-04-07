@@ -1,14 +1,30 @@
 {% extends "base.html" %} {% block title %}Index{% endblock %} {% block content%}
-<div class=centreme><img src="static/undercon.png" width=200/><br/>
-<img src="static/druid.jpg" width=200/></div>
+<div class=centreme><br/>
+<img id=druidimg src="static/druid.jpg" width=200/></div>
 
 <h2>{{ user.username }}</h2>
 
+{% with messages = get_flashed_messages() %}
+	{% if messages %}
+		{% for msg in messages %}
+			<div class=flash>{{ msg }}</div>
+		{% endfor %}
+	{% endif %}
+{% endwith %}
+
 <div class="grid">
-	<a href="{{ url_for('views.gitlines') }}" class="no-link"><div class="grid-item"><img src="static/githubiconL.png" width=100 /><br/>Github Code</div>
-	<a href="{{ url_for('views.writings') }}" class="no-link"><div class="grid-item"><img src="static/writings.png" width=100 /><br/>Writing Projects</div>
-	<a href="{{ url_for('views.opinions') }}" class="no-link"><div class="grid-item"><img src="static/opinions.png" width=100 /><br/>Opinions</div>
+	<a href="{{ url_for('views.gitlines') }}" class="no-link"><div class="grid-item"><img class=imgbtn src="static/githubiconL.png" width=100 /><br/>Github Code</div></a>
+	<a href="{{ url_for('views.writings') }}" class="no-link"><div class="grid-item"><img class=imgbtn src="static/writings.png" width=100 /><br/>Writing Projects</div></a>
+	<a href="{{ url_for('views.opinions') }}" class="no-link"><div class="grid-item"><img class=imgbtn src="static/opinions.png" width=100 /><br/>Opinions</div></a>
 </div>
 
 <div id=datetimebox></div>
+<div id=chatbox>
+	<div id=chattitle><b>Chat</b></div>
+	<div id=chattext>[not built yet]</div>
+	<div id=chattype>
+		<input type=text id=chatinput />
+		<button type=submit id=chatbutton>Go</button>
+	</div>
+</div>
 {% endblock %}

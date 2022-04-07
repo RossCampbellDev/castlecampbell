@@ -15,7 +15,6 @@ def login():
 		user = User.query.filter_by(username=username).first()
 		if user:
 			if check_password_hash(user.password, password):
-				flash("Logged in!", category='success')
 				login_user(user, remember=True)
 				redirect(url_for('views.index'))
 			else:
@@ -24,6 +23,29 @@ def login():
 			flash('Username incorrect.', category='error')
 
 	return render_template("login.html", user=current_user)
+
+
+@auth.route("/signup", methods=['GET', 'POST'])
+def signup():
+	if request.method == 'POST':
+		username = request.form.get("username")
+		password = request.form.get("password")
+	
+		user = User.query.filter_by(username=username).first()
+		if user is not None:
+			return render_template("signup.html", user='')
+
+		if username == '' or password=='':
+			flash('Form incomplete.', category='error')
+		else:
+			user = User(username=username, password=generate_password_hash(password, method='sha256'))
+			print("new user added " + username + ", " + password)
+			db.session.add(user)
+			db.session.commit()
+			return render_template("login.html", user=user)
+	
+	return render_template("signup.html", user=current_user)
+
 
 @auth.route("/logout")
 @login_required

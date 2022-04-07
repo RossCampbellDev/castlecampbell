@@ -1,0 +1,16 @@
+{% extends "base.html" %} {% block title %}Index{% endblock %} {% block content%}
+<div class=centreme><br/>
+<img id=druidimg src="static/druid.jpg" width=200/></div>
+
+<h2>{{ user.username }}</h2>
+
+{% with messages = get_flashed_messages() %}
+	{% if messages %}
+		{% for msg in messages %}
+			<div class=flash>{{ msg }}</div>
+		{% endfor %}
+	{% endif %}
+{% endwith %}
+
+<div id=datetimebox></div>
+{% endblock %}

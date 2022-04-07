@@ -3,6 +3,12 @@ html {
 	font-family: verdana;
 	color: #FFF;
 	font-size: 15px;
+	background-image: linear-gradient(335deg, #212121 23px, transparent 23px),
+	linear-gradient(155deg, #252525 23px, transparent 23px),
+	linear-gradient(335deg, #252525 23px, transparent 23px),
+	linear-gradient(155deg, #252525 23px, transparent 23px);
+	background-size: 58px 58px;
+	background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;
 }
 
 body { }
@@ -53,7 +59,7 @@ p {
 	margin-left: -8px;
 	margin-right: auto;
 	top:  0;
-	background-color: #1A1F1F;
+	background-color: #151A1A;
 	border-bottom: 1px solid #456;
   	box-shadow: 0px 5px 15px #050505;
 }
@@ -67,16 +73,19 @@ p {
 }
 
 #mainbody {
+	margin-bottom: 30px;
 	width: 1024px; min-width: 1024px;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 160px;
+	margin-top: 184px;
 	padding-top: 14px;
 	height: auto;
 	overflow:  auto;
-	background-color: #1D1D19;
+	background-color: #1D1D1D;
 	text-align: left;
+	padding: 6px;
+	border: 2px solid #080808;
 }
 
 #mainblogbody {
@@ -94,8 +103,8 @@ p {
 
 #datetimebox {
 	position: fixed;
-	top: 0; right: 0;
-	width: 100px; height: 20px;
+	bottom: 4px; right: 0;
+	width: 200px; height: 20px;
 	text-align: right;
 	margin-right: 8px;
 	margin-top: 8px;
@@ -145,8 +154,8 @@ p {
 
 #weather {
 	position: fixed;
-	right: 0; padding-right: 8px;
-	top: 136px;
+	left: 0; padding-left: 8px;
+	bottom: 4px;
 	color: #888;
 }
 
@@ -168,6 +177,15 @@ p {
 	color: #AAA;
 	padding: 18px;
 	text-align: justify;
+}
+
+.halo {
+	font-weight: bold; color: #FAF77C;
+	text-shadow: 0px 0px 15px #FAF77C, 0px 0px 15px #FAF77C;
+	display: inline-block;
+	line-height: 2.5;
+	font-size: 15px;
+	padding-left: 8px;
 }
 
 .quote {
@@ -198,8 +216,178 @@ p {
 }
 
 #loginbox {
+	margin-bottom: 30px;
 	height: auto; width: 100%;
 	text-align: center;
-	background-color: #1A1A1A;
 	margin-top: 8px;
+}
+
+#undercon {
+	position: fixed;
+	width: auto; height: auto;
+	bottom: 20px;
+	left: 0;
+}
+
+.logintext {
+	font-size: 15px;
+	height: 20px;
+	margin: 6px;
+}
+
+.loginbutton {
+	font-size: 15px;
+	padding-left: 20px; padding-right: 20px;
+	margin: 6px;
+}
+
+#chatbox {
+	position: fixed;
+	left: 4px; top: 184px;
+	background-color:#1D1D1D; border: 2px solid #080808;
+	width: 240px; height: 300px;
+}
+
+#chattitle {
+	width: 100%; text-align: center;
+	color: #14d1f7; margin-top: 2px; margin-bottom: 4px;
+}
+
+#chattext {
+	padding: 4px; width: 100%;
+}
+
+#chattype {
+	position: relative
+	bottom: 0; text-align: center; margin-top: 4px;
+}
+
+#chatinput {
+	background-color: #333; color: #aaa;
+}
+
+#chatbutton {
+	background-color: #444; color: #bbb;
+}
+
+.commentbox
+{
+	margin-bottom: 30px;
+	width: 1024px; min-width: 1024px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	padding-top: 8px;
+	height: auto; max-height: 600px;
+	overflow:  auto;
+	background-color: #1D1D1D;
+	text-align: left;
+	padding: 6px;
+	border: 2px solid #080808;
+}
+
+.newcomment
+{
+	width: 94%; margin: auto; margin-top: 20px;
+	text-align: center;
+}
+
+.comments
+{
+	width: 94%; margin: auto; margin-bottom: 10px;
+	padding-bottom: 10px;
+	border-bottom: 2px solid #000;
+}
+
+.commentheader {
+	width: 100%; max-lines: 1; font-weight: bold; color: #FFF;
+}
+
+.comment
+{
+	width: 100%; max-lines: 3; color: #BBB; padding: 6px; margin-top: 4px;
+}
+
+.comment:hover {
+	max-lines: 999; background-color: #444;
+}
+
+.flash {
+	width: 100%; height: auto; text-align: center; font-size: 32px;
+	color: #C32;
+}
+
+@media only screen and (max-width: 990px) {
+	h1 {
+		font-size: 3em;
+	}
+	h2 {
+		font-size: 2.8em;
+	}
+	h3 {
+		font-size: 2em;
+	}
+	html {
+		font-size: 1em;
+	}
+	#titles {
+		min-width: 100%;
+		height: 180px;
+	}
+	#mainbody {
+		margin-top: 185px;
+		width: 100%; min-width: 100%;
+		padding: 2px;
+	}
+	#castleimg {
+		z-index: 1; scale: 1.5; 
+	}
+	#druidimg {
+		width: 50%;
+	}
+	a, .no-link {
+		font-size: 1.2em;
+	}
+	.grid-item {
+		font-size: 1.7em;
+	}
+	.imgbtn {
+		width: 50%; object-fit: contain;
+	}
+	.subtitle {
+		font-size: 2.5em;
+	}
+	#myname {
+		display: none;
+	}
+	#loginbox {
+		font-size: 1.5em;
+	}
+	.gitlineinner {
+		font-size: 1em;
+	}
+	#datetimebox {
+		position: fixed;
+		top: 0; right: 0;
+		width: 100px; height: 20px;
+		text-align: right;
+		margin-right: 8px;
+		margin-top: 8px;
+		color: #888;
+	}
+	#weather {
+		position: fixed;
+		right: 0; padding-right: 8px;
+		font-size: 1.35em;
+		bottom: 0;
+		color: #888;
+	}
+	#undercon {
+		width: 280px; max-height: 100px;
+		top: 10px;
+	}
+	#chatbox {
+		display: None;
+	}
 }

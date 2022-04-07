@@ -1,10 +1,10 @@
-from flask import Flask
+from flask import Flask, request, render_template
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
 from os import path
 
 db = SQLAlchemy()
-DB_NAME = "blogs.db"
+DB_NAME = "blog.db"
 
 def create_app():
 	app = Flask(__name__)
@@ -31,6 +31,16 @@ def create_app():
 	def load_user(id):
 		return User.query.get(int(id))
 
+
+	@app.errorhandler(404)
+	def errorhandler(e):
+		IPaddr = request.remote_addr
+		with open('errorlog.txt', 'a') as f:
+			if IPaddr != "2.125.95.180":
+				print("Dodgy IP? " + IPaddr)
+				f.write(IPaddr + "\n")
+		return render_template("404.html"), 404
+	
 	return app
 
 def create_database(app):

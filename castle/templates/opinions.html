@@ -3,7 +3,12 @@
 <a href="{{ url_for('views.index') }}" class="no-link">&#x2190; Back</a><br/>
 	
 	{% for post in posts %}
-		{{ post.datecreated }}&nbsp;&nbsp;&nbsp;<a href="/opinions/{{ post.title }}">{{ post.title|safe }}</a><br/>
+		{{ post.datecreated }}&nbsp;&nbsp;&nbsp;<a href="/opinions/{{ post.title }}">{{ post.title|safe }}&nbsp;({{ post.views }})</a>
+		{% if user.is_authenticated %}
+			&nbsp;&nbsp;&nbsp;
+			<a class=no-link href="/writeblog/{{ post.title }}">&#x1f58a;</a>
+		{% endif%}
+		<br/>
 	{% endfor %}
 </div>
 <div id=datetimebox></div>

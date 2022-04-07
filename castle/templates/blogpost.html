@@ -1,7 +1,35 @@
-{% extends "base.html" %} {% block title %}Index{% endblock %} {% block content%}
+{% extends "base.html" %} {% block title %}Blog Post{% endblock %} {% block content%}
 <a href="{{ url_for('views.opinions') }}" class="no-link">&#x2190; Back</a><br/>
 <div id=blogdate>{{ post.datecreated|safe }}</div>
 <div id=blogtitle>{{ post.title|safe }}</div>
 <div id=blogbody>{{ post.body|safe }}</div>
+<div style='float: right; margin-right: 12px; font-style: italic; color: #888;'>Views: {{ post.views }}</div>
 <div id=datetimebox></div>
+{% endblock %}
+{% block comments %}
+<div class=commentbox>
+	<div class=comments>
+		{% for comment in post.comments %}
+		<div class=comment>
+			<div class=commentheader>{{ comment.user.username }} - {{ comment.datecreated }}</div>
+			{{ comment.text }}
+		</div>
+		{% if user.id == 1 %}
+			<a href=/deletecomment/{{ comment.id }}>Delete</a>
+		{% endif %}
+		{% endfor %}
+	</div>
+	
+	{% if user.is_authenticated %}
+	<form method=post action={{ url_for('views.new_comment') }}>
+	<input type=hidden name=pid id=pid value={{ post.id }} />
+	<div class=newcomment>
+		<textarea rows=3 cols=70 name=newcomment id=newcomment></textarea><br/>
+		<button type=submit>Go</button>
+	</div>
+	</form>
+	{% else %}
+	<div class=centreme>(Sign up to comment)</div>
+	{% endif %}
+</div>
 {% endblock %}

@@ -1,0 +1,16 @@
+{% extends "base.html" %} {% block title %}Index{% endblock %} {% block content%}
+	<div id=loginbox>
+	{% if user.is_authenticated %}
+		<a href="{{ url_for('views.index') }}">Welcome {{ user.username }}, continue...</a>
+	{% else %}
+		<form method=post action="{{ url_for('auth.signup') }}">
+			<h3>New User</h3>
+			Username<br/>
+			<input class=logintext type=text name=username id=username placeholder='user name' /><br/>
+			Password<br/>
+			<input class=logintext type=password name=password id=password /><br/>
+			<button class=loginbutton type=submit value='Go'>Log in</button>
+		</form>
+	{% endif %}
+	</div>
+{% endblock %}
