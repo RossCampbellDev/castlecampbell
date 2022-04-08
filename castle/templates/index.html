@@ -1,7 +1,7 @@
 {% extends "base.html" %} {% block title %}Index{% endblock %} {% block content%}
 <div class=centreme><br/>
-<img id=druidimg src="static/druid.jpg" width=200/></div>
-
+<img id=druidimg src="static/druid.jpg" width=200 onclick=changecolour() /></div>
+<div id=druidmsg>Shazam!  Wow!</div>
 <h2>{{ user.username }}</h2>
 
 {% with messages = get_flashed_messages() %}

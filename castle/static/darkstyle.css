@@ -72,6 +72,20 @@ p {
 	cursor: pointer;
 }
 
+#druidimg:hover {
+        cursor: help;
+}
+
+#druidmsg {
+	position: absolute;
+	width: 700px; left: 50%; margin-left: -350px; height: 300px;
+	z-index: 2;
+	transform: rotate(-30deg);
+	font-size: 80px;
+	color: #7FC3F4;
+	display: none;
+}
+
 #mainbody {
 	margin-bottom: 30px;
 	width: 1024px; min-width: 1024px;
