@@ -1,3 +1,14 @@
+::-moz-selection {
+	background-color: #000; 
+	color: #14d1f7;
+	font-weight: bold;
+}
+::selection {
+	background-color: #000; 
+	color: #14d1f7;
+	font-weight: bold;
+}
+
 html {
 	background-color: #1A1A15;
 	font-family: verdana;
@@ -40,7 +51,7 @@ h2 {
 }
 
 h3 {
-	color: #ADF;
+	color: #14D1F7;
 	font-family: verdana;
 	font-size: 18px;
 	margin-top: 4px;
@@ -181,7 +192,7 @@ p {
 #blogtitle {
 	font-size: 32px;
 	font-weight: bold;
-	color: #ADF;
+	color: #14D1F7;
 	padding: 4px;
 	padding-left: 18px;
 	border-bottom: 1px solid #666;
